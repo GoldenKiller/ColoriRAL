@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings ptype="MONOLITH" ppkg="entity" epkg="domain" v="5.4.2" rws="_16756819847472" Pws="_16756819847472" cws="_16756819847472" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_16756819847471" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <entity compositePrimaryKeyType="D" compositePrimaryKeyClass="ColorePK" abs="false" class="Colore" v="true" jbn="false" xre="false" m="false" rootElement="_16756819847471" id="_167568415684434">
+        <ath>Patrizia</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="codice" id="_167568450284544">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="nome" id="_167568450924645">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="hex" id="_167584105632556">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="img" id="_167584317388058">
+                <xwm/>
+                <xm/>
+            </basic>
+            <many-to-one optional="true" primaryKey="true" connected-entity-id="_167568420516437" v="true" xvt="" name="gradazione" id="_167568504020947">
+                <xwm/>
+                <xm/>
+            </many-to-one>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_167568415684535">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Colore.findAll">
+            <query>Select e from Colore e</query>
+        </nq>
+        <nq e="false" name="Colore.findByCodice">
+            <query>Select c from Colore c where c.codice=:codice</query>
+        </nq>
+        <nq e="false" name="Colore.findByNome">
+            <query>Select c from Colore c where c.nome=:nome</query>
+        </nq>
+        <nq e="false" name="Colore.findByHex">
+            <query>Select c from Colore c where c.hex=:hex</query>
+        </nq>
+        <nq e="false" name="Colore.findByImg">
+            <query>Select c from Colore c where c.img=:img</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="GradazionePK" abs="false" class="Gradazione" v="true" jbn="false" xre="false" m="false" rootElement="_16756819847471" id="_167568420516437">
+        <ath>Patrizia</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="codice" id="_167568435250140">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="nome" id="_167568445387843">
+                <xwm/>
+                <xm/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_167568420516538">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Gradazione.findAll">
+            <query>Select e from Gradazione e</query>
+        </nq>
+        <nq e="false" name="Gradazione.findByCodice">
+            <query>Select g from Gradazione g where g.codice=:codice</query>
+        </nq>
+        <nq e="false" name="Gradazione.findByColoregradazione">
+            <query>Select g from Gradazione g where g.coloregradazione=:coloregradazione</query>
+        </nq>
+        <nq e="false" name="Gradazione.findByHex">
+            <query>Select g from Gradazione g where g.hex=:hex</query>
+        </nq>
+        <nq e="false" name="Gradazione.findByNome">
+            <query>Select g from Gradazione g where g.nome=:nome</query>
+        </nq>
+    </entity>
+    <wsl>
+        <ws n="Main" id="_16756819847472">
+            <i ref="_167568420516437" x="96" y="27"/>
+            <i ref="_167568415684434" x="377" y="27"/>
+        </ws>
+    </wsl>
+</entity-mappings>
