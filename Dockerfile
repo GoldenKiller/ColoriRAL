@@ -12,3 +12,4 @@ MAINTAINER test
 COPY --from=build /home/app/target/ColoriRAL-0.0.1-SNAPSHOT.jar ColoriRAL-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","-Dspring.profiles.active=database,test","/ColoriRAL-0.0.1-SNAPSHOT.jar"]
+
